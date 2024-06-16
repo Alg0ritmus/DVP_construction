@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation {
+    display: flex;
+    background-color: #18191D;
+    width: 100%;
+    padding: 2rem 10rem;
+    align-items: center;
+    justify-content: space-between; /* Adjusted */
+}
+
+.logo {
+    font-size: 32px; /* Adjusted */
+    color: #fff; /* Added */
+}
+
+.hero-wrapper {
+    position: relative; /* Added */
+}
+
+.hero-body {
+    display: flex;
+    flex-wrap: wrap; /* Added */
+}
+
+.hero-body-content {
+    padding: 4.5rem 0 0 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.hero-body-text-section {
+    flex: 1; /* Added */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hero-body-image-section {
+    flex: 1; /* Added */
+    margin-top: -8rem;
+    overflow: hidden; /* Added */
+}
+
+.hero-upper-text {
+    font-size: 20px; /* Adjusted */
+}
+
+.hero-middle-text {
+    font-size: 64px; /* Adjusted */
+    width: 800px;
+    min-width: 400px;
+    margin: 10px 0px 30px 0px;
+}
+
+.hero-body-image-section img {
+    width: 100%;
+    height: auto; /* Changed height to auto */
+    display: block;
+}
+
+
+.hero-body-image-section {
+    /* flex: 1; */
+    margin-top: -8rem;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    right: 10em;
+    margin: -9em 0 0 0;
+    width: 50%;
+    max-width: 700px;
+}
+
+
+
+.hero-cta-btn {
+    margin: 100px 0 0 0;
+}
+
+.cta-btn{
+    padding: 14px 18px;
+}
+
+/* GRID FOR FUTURE USE*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 10px; /* Adjust the gap between grid items as needed */
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #ddd;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.grid-item.span-2 {
+    grid-column: span 2; /* Spans 2 columns */
+}
+
+.grid-item.span-5 {
+    grid-column: span 5; /* Spans 2 columns */
+}
+
+.grid-item.span-7 {
+    grid-column: span 7; /* Spans 2 columns */
+}
+
+.grid-item.span-10 {
+    grid-column: span 10; /* Spans 2 columns */
+}

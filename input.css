@@ -1,0 +1,65 @@
+.input-field{
+  position: relative;
+}
+.input-field input{
+  width: 350px;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 7px;
+  border: 2px solid #83735C;
+  background: transparent;
+  color: #000;
+  outline: none;
+}
+.input-field label{
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #000;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+  top: 0;
+  left: 15px;
+  font-size: 14px;
+  padding: 0 2px;
+  background: #fff;
+  color:#83735C;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-gap: 30px 10px; /* Space between grid items */
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto; /* Center the form */
+}
+
+.form-container input,
+.form-container button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.full-width {
+    grid-column: 1 / -1; /* Span across both columns */
+}
+
+.submit-button {
+    grid-column: 1 / -1; /* Span across both columns */
+    padding: 15px;
+    background-color: #000000; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove borders */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit-button:hover {
+    background-color: #242424; /* Darker green on hover */
+}
