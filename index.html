@@ -15,15 +15,16 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous"> -->
     <!-- bluma -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pageable/0.6.8/pageable.min.css" integrity="sha512-3TXKa5BKQaIe355g1vIjfKCFgS87cfG1MiUHFrF+g/jxpvZoa71hesOt7JHUMYXOv93a8zcgRs/AZsnLARYUSg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
 
-<div class="wrap"> <!-- for viewport media query-->
-    <main id="hero-section">
+<div class="wrap" id="wrap-container"> <!-- for viewport media query-->
+    <main id="hero-section" data-anchor="Page 1">
         <div class="hero-wrapper">
             <div class="navigation">
                 <div class="logo-section"><span class="montserrat-alternates-bold logo"><a class="color-gold">DVP</a><a class="color-snowwhite"> Construction</a></span></div>
-                <div class="contact-section"><a href="#" class="btn-white-outline montserrat-alternates-bold">Kontakt</a></div>
+                <div class="contact-section"><a href="#contact-form" class="btn-white-outline montserrat-alternates-bold">Kontakt</a></div>
             </div>
             <div class="wave-separator">
                 <img src="images/wave.svg" alt="DVG Construction wave separator" width="100%" height="100%">
@@ -32,13 +33,13 @@
                 <div class="hero-body-content">
                     <div class="hero-body-text-section">
                         <div class="hero-text-box">
-                            <h4 href="#" class="hero-upper-text color-gold montserrat-medium">VÍTA VÁS DVP CONSTRUCTION</h4>
-                            <h1 href="#" class="hero-middle-text montserrat-medium">Zvyšujeme Váš dosah, zvýšime Vaše zisky<span class="color-gold">.</span></h1>
-                            <h3 href="#" class="hero-lower-text montserrat-medium">Škálujeme Vaše podnikanie v digitálnom svete</h3>
+                            <h4 class="hero-upper-text color-gold montserrat-medium">VÍTA VÁS DVP CONSTRUCTION</h4>
+                            <h1 class="hero-middle-text montserrat-medium">Zvyšujeme Váš dosah, zvýšime Vaše zisky<span class="color-gold">.</span></h1>
+                            <h3 class="hero-lower-text montserrat-medium">Škálujeme Vaše podnikanie v digitálnom svete</h3>
                         </div>
                         <div class="hero-text-separator"></div>
                         <div class="hero-cta-btn">
-                            <a href="#" class="btn-dark montserrat-medium cta-btn">Získajte <span class="montserrat-alternates-bold">viac</span> klientov</a>
+                            <a href="#contact-form" class="btn-dark montserrat-medium cta-btn">Získajte <span class="montserrat-alternates-bold">viac</span> klientov</a>
                         </div>
                     </div>
                 </div>
@@ -48,7 +49,7 @@
             </div>
         </div>
     </main>
-    <section class="card-section bg-color-snowwhite">
+    <section class="card-section bg-color-snowwhite" data-anchor="Page 2">
         <div class="card-wrapper">
             <div class="card">
                 <div class="card-icon">
@@ -73,7 +74,7 @@
             </div>
         </div>
     </section>
-    <section class="keys-to-success-section">
+    <section class="keys-to-success-section" data-anchor="Page 3">
         <div class="kts-wrapper">
             <div class="kts-title">
                 <div class="kts-text">5 Krokov k <span class="montserrat-alternates-bold">úspechu</span> v roku 2024<span class="color-gold">.</span></div>
@@ -83,7 +84,7 @@
             <div class="kts-body kts-img-2"><img src="images/steps.svg" alt="DVG Construction hero building image" width="100%" height="100%"></div>
         </div>
     </section>
-    <section class="we-help-section bg-color-snowwhite">
+    <section class="we-help-section bg-color-snowwhite" data-anchor="Page 4">
         <div class="we-help-wrapper">
             <div class="we-help-body">
                 <div class="header-1">Podporujeme <span class="montserrat-bold">lokálnych</span> podnikateľov<span class="color-gold">.</span></div>
@@ -93,7 +94,7 @@
                     <img src="images/svk_map_edited.svg" alt="DVG Construction hero building image" width="100%" height="100%">
                 </div>
                 <div class="we-help-cta-btn">
-                    <a href="#" class="btn-dark montserrat-medium cta-btn">Konzultácia <span class="montserrat-bold">zdarma</span></a>
+                    <a href="#contact-form" class="btn-dark montserrat-medium cta-btn">Konzultácia <span class="montserrat-bold">zdarma</span></a>
                 </div>
                 
             </div>
@@ -103,7 +104,7 @@
         </div>
 
     </section>
-    <section class="form-section">
+    <section class="form-section" data-anchor="Page 5">
         <div class="left-side-form">
             <div class="left-side-form-logo">
                 <img class="form-img-1" src="images/art.svg" alt="DVG Construction hero building image" width="100%" height="100%">
@@ -114,7 +115,7 @@
             </div>
         </div>
         <div class="right-side-form">
-            <div class="form-following-text">
+            <div class="form-following-text" id="contact-form">
                 <div class="form-title">
                     <div class="form-text"><h1 class="montserrat-medium">Ste pripravený digitálne podporiť <span class="montserrat-bold">rast</span> Vašej firmy<span class="color-gold">?</span></h1></div>
                     <div class="form-underlying"><img src="images/underlying.svg" alt="DVG Construction hero building image" width="100%" height="100%"></div>
@@ -161,4 +162,21 @@
     </section>
 </div>
 </body>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pageable/0.6.8/pageable.min.js" integrity="sha512-X2m5cfyS2vU6yG+TrL/kM2FVlPn7EGF/+HI38nsCMyJtFCqkqb8tKwD/IKcQK+TQkwl2OCEns3K/P16Hb/5hvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    new Pageable("#wrap-container");
+</script> -->
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
 </html>

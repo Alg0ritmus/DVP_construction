@@ -270,7 +270,6 @@
 }
 
 @media (min-width: 750px) {
-    /* body{background-color: red;} */
     .wave-separator{
         visibility: visible;
     }
@@ -400,6 +399,45 @@
     }
     .form-img-2{
         max-height: 600px;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .hero-upper-text{
+        font-size: 2em;
+        width: 24em;
+    }
+    .hero-middle-text{
+        font-size: 4em;
+        width: 12em;
+    }
+    .hero-lower-text{
+        font-size: 1.5em;
+        width: 24em;
+    }
+    .hero-body-image-section{
+        width: 35em;
+    }
+    .kts-text {
+        font-size: 3em;
+        width: 10em;
+    }
+    .kts-body {
+        max-width: 750px;
+    }
+    .kts-underlying{
+        max-width: 150px;
+        transform: translate(0%, 50%);
+    }
+    .we-help-body{
+        width: 70%;
+    }
+    .logo{
+        font-size: 2em;
+    }
+    .contact-section a {
+        font-size: 1em;
     }
 }
 
