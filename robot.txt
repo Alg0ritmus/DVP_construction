@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alg0ritmus.github.io/DVP_construction/sitemap.xml
