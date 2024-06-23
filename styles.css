@@ -18,6 +18,10 @@
     color: #fff; /* Added */
 }
 
+.logo-section a{
+    text-decoration: none;
+}
+
 .contact-section a{
     font-size: 10px;
 }
