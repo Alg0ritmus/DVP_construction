@@ -180,15 +180,21 @@
     width: 300px;
     margin: auto;
 }
+
 .form-section{
+    display: flex;
     position: relative;
     padding: 5em 2em;
+    flex-direction: column-reverse;
 }
-.left-side-form{
-    position: absolute;
+.left-side-form-logo{
+    height: 100px;
+}
+.left-side-form {
+    height: 20%;
     z-index: -1;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 .form-text{
@@ -271,6 +277,22 @@
 
 .grid-item.span-10 {
     grid-column: span 10; /* Spans 2 columns */
+}
+.contact-icon-field {
+    margin: 1em auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+}
+
+.contact-icons {
+    width: 28px;
+}
+.contact-field {
+
+    font-size: small;
 }
 
 @media (min-width: 750px) {
@@ -385,6 +407,8 @@
     }
     .left-side-form {
         /* padding: 5em 1em; */
+        position: absolute;
+        height: auto;
         grid-column: span 1;
         background-color: #E6E7EB;
         position: relative;
@@ -395,6 +419,7 @@
         padding: 5em 1em;
     }
     .left-side-form-logo{
+        height: auto;
         width: 99%;
         margin: auto;
     }
@@ -403,6 +428,43 @@
     }
     .form-img-2{
         max-height: 600px;
+    }
+    .lsf-contact-box {
+        position: absolute;
+        bottom: 5em;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+    .contact-field {
+        font-size:medium;
+        width: 70%;
+        max-width: 220px;
+        margin: auto;
+        display: flex;
+        gap: 10px;
+        bottom: 3em;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+    
+    .contact-icon-field {
+        margin: 1em auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    
+    .contact-icons{
+        width: 28px;
+    }
+    .small-screen-only{
+        display: none;
+        opacity: 0.2;
     }
 }
 
@@ -443,5 +505,79 @@
     .contact-section a {
         font-size: 1em;
     }
+
+    .about-section-outer-wrapper{
+        max-width: 1100px;
+        margin: auto;
+    }
 }
 
+
+/* about page */
+.about-wrapper {
+    gap: 5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-text-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.about-text {
+    font-size: medium;
+    margin: 3em auto;
+    letter-spacing: 4px;
+    line-height: 1.5em;
+    font-family: 'Montserrat';
+    font-weight: 900;
+}
+
+
+.about-text-section h2 {
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: smaller;
+}
+
+.about-text-section p {
+    text-align: justify;
+    line-height: 1.5em;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: small;
+}
+
+@media (min-width: 750px) {
+    .about-text{
+        font-size: x-large;
+        margin: 3em auto;
+        letter-spacing: 4px;
+        line-height: 1.5em;
+        font-family: 'Montserrat';
+        font-weight: 900;
+        
+    }
+
+    .about-text-section h2 {
+        letter-spacing: 4px;
+        line-height: 1.5em;
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: larger;
+    }
+
+
+    .about-text-section p {
+        text-align: justify;
+        letter-spacing: 0.4px;
+        line-height: 1.8em;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: medium;
+    }
+}

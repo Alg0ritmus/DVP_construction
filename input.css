@@ -33,6 +33,7 @@ input:valid ~ label{
 }
 
 .form-container {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
     grid-gap: 30px 10px; /* Space between grid items */
@@ -62,4 +63,31 @@ input:valid ~ label{
 
 .submit-button:hover {
     background-color: #242424; /* Darker green on hover */
+}
+
+/* popups to forms */
+.popup {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  display: none;
+  font-size: 16px;
+  z-index: 1000;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.success {
+  background-color: rgb(101, 196, 101);
+  border: solid 1px rgb(1, 117, 1);
+}
+
+.error {
+  background-color: rgb(241, 75, 75);
+  border: solid 1px rgb(158, 0, 0);
 }
