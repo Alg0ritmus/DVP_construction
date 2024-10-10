@@ -27,7 +27,35 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pageable/0.6.8/pageable.min.css" integrity="sha512-3TXKa5BKQaIe355g1vIjfKCFgS87cfG1MiUHFrF+g/jxpvZoa71hesOt7JHUMYXOv93a8zcgRs/AZsnLARYUSg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 </head>
 <body>
-
+    <div class="lotteryBanner" onclick="openModal()">Práve prebieha súťaž o náš Business balíček na mesiac úplne <u>zadarmo</u>. Pre zapojenie sa do súťaže kliknite <u>tu</u>.</div>
+    <div class="email-modal">
+        <div id="poptinDraggableContainer" class="draggable-container edited type-vertical ui-selectable">
+            <span class="close-icon" title="">×</span>
+            <div class="email-wrapper">
+                <div><p class="email-header">Zapojte sa do súťaže o náš Business balíček na mesiac úplne zadarmo.</p><br/>
+                    <p class="email-header" style="font-size: 14px; font-weight: lighter;">Stačí vyplniť emailovú adresu, na ktorú Vás v prípade výhry kontaktujeme.</p>
+                </div>
+                
+                <div class="email-field-wrapper">
+                    <input id="poptinDesignInputTextFieldEmail" class="poptin-design-fields-form" name="poptinDesignInputTextFieldEmail" type="text" placeholder="Zadajte Váš e-mail" data-gramm="false" data-gramm_editor="false" data-kwimpalastatus="false" data-dashlane="false" data-form-type="other" autocomplete="off" value="">
+                </div>
+                <div class="draggable resizable poptin-form-submit-button ui-selectee ui-draggable ui-resizable ui-resizable-autohide" id="poptinFormSubmitText">      
+                    <div class="froala-editor-button">
+                        <div>
+                            <div class="fr-element fr-view" dir="auto" contenteditable="true" aria-disabled="false" spellcheck="true">
+                            <p onclick="submitNewsletterForm()"><strong>Potvrdiť</strong></p>
+                            </div>
+                        </div>
+                    </div>    
+                    <div>
+                        <p class="unsub-text">Odber môžete kedykoľvek zrušiť</p>
+                        <div id="successNewsletterPopup" class="popup success email-popup">Success!</div>
+                        <div id="errorNewsletterPopup" class="popup error email-popup">Error!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 <div class="wrap" id="wrap-container"> <!-- for viewport media query-->
     <main id="hero-section" data-anchor="Page 1">
         <div class="hero-wrapper">
@@ -95,6 +123,66 @@
             <div class="kts-body kts-img-2"><img src="images/steps.svg" alt="Vytvorili sme pre Vás 5 krokov, ktorými vybudujete Váš biznis v digitálnom priestore a zvýšite počet zákazok." width="100%" height="100%"></div>
         </div>
     </section>
+    <section class="bg-color-lightbrown">
+        <div>
+        <div class="centered">
+            <div class="kts-text">Nenechajte  sa predbehnúť <span class="montserrat-bold">konkurenciou</span></div>
+        </div>
+        <div class="pricing-table ">
+            <!-- Basic Plan -->
+            <div class="pricing-card pricing-basic">
+                <h2>Základ</h2>
+                <h3 class="discount-price">
+                    <span class="old-price">150€</span>
+                    <span class="new-price">100€</span>
+                </h3>
+                <p>mesačne</p>
+                <a href="#" class="pricing-btn">Mám záujem</a>
+                <ul>
+                    <li>✔ Tvorba reklám na soc. sieťach</li>
+                    <li>✔ Optimalizácia reklám</li>
+                    <li>✔ Mesačná sumarizácia dosiahnutých výsledkov</li>
+                </ul>
+            </div>
+    
+            <!-- Standard Plan -->
+            <div class="pricing-card pricing-standard">
+                <h2>Štandard</h2>
+                <h3 class="discount-price">
+                    <span class="old-price">200€</span>
+                    <span class="new-price">150€</span>
+                </h3>
+                <p>mesačne</p>
+                <a href="#" class="pricing-btn">Mám záujem</a>
+                <ul>
+                    <li>✔ Zahŕňa balíček Základ</li>
+                    <li>✔ Tvorba a správa soc. sietí</li>
+                    <li>✔ Sumarizácia výsledkov 2-krát mesačne</li>
+                    <li>✔ Správa Google reklám</li>
+                </ul>
+            </div>
+    
+            <!-- Business Plan -->
+            <div class="pricing-card pricing-business">
+                <h2>Business</h2>
+                <h3 class="discount-price">
+                    <span class="old-price">300€</span>
+                    <span class="new-price">250€</span>
+                </h3>
+                <p>mesačne</p>
+                <a href="#" class="pricing-btn">Mám záujem</a>
+                <ul>
+                    <li>✔ Zahŕňa balíček Štandard</li>
+                    <li>✔ Tvorba komplexných reklamných kampaní</li>
+                    <li>✔ Tvorba a správa webstránky</li>
+                    <li>✔ Sumarizácia výsledkov podľa vašich potrieb</li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-size: 12px; padding: 2em; text-align: center;">*Cena nezahŕňa poplatky za reklamný priestor na sociálnych platformách.</p>
+    </div>
+            
+    </section>
     <section class="we-help-section bg-color-snowwhite" data-anchor="Page 4">
         <div class="we-help-wrapper">
             <div class="we-help-body">
@@ -114,6 +202,9 @@
             </div>
         </div>
 
+
+    
+
     </section>
     <section class="form-section" data-anchor="Page 5">
         <div class="left-side-form">
@@ -126,7 +217,7 @@
                     <div class="contact-field">
                         <div class="contact-icon-field"><img class="contact-icons" src="images/dvp_web.png" alt="DVG Construction - kontakt, webová stránka www.dvp-construction.sk"><span>www.dvp-construction.sk</span></div>
                         <div class="contact-icon-field"><img class="contact-icons" src="images/dvp_email.png" alt="DVG Construction - kontakt, email info@dvp-construction.sk"><span>info@dvp-construction.sk</span></div>
-                        <div class="contact-icon-field"><img class="contact-icons" src="images/dvp_phone.png" alt="DVG Construction - kontakt, tel. cislo +421 944 389 430"><span>+421 944 389 430</span></div>
+                        <!-- <div class="contact-icon-field"><img class="contact-icons" src="images/dvp_phone.png" alt="DVG Construction - kontakt, tel. cislo +421 944 000 000"><span>+421 944 000 000</span></div> -->
                     </div>
                 </div>
             </div>
@@ -168,7 +259,7 @@
 
                     <div class="input-field  full-width">
                         <h5 class="form-label color-gold">Vaša poznámka pre nás:</h5>
-                        <textarea id="message" name="textarea" placeholder="..." class="form-textarea full-width"></textarea>
+                        <textarea id="message" name="textarea" placeholder="Napíšte nám (napr. Mám záujem o štandardný balíček ... )" class="form-textarea full-width"></textarea>
                     </div>
                     <button type="submit" onclick="submitForm()"  class="submit-button"><span class="montserrat-medium submit-btn">Odošli formulár</span></button>
                     <div id="successPopup" class="popup success">Success!</div>
@@ -230,6 +321,39 @@
         })
         .catch((error) => showPopup('errorPopup', 'Nepodarilo sa odoslať formulár, skús nás kontaktovať pomocou emailu!'));  
     }
+
+    function submitNewsletterForm(){
+    
+        const email = document.getElementById('poptinDesignInputTextFieldEmail').value;
+
+        const myHeaders = new Headers();
+        myHeaders.append("accept", "*/*");
+        myHeaders.append("accept-language", "sk,sk-SK;q=0.9,cs;q=0.8,en-US;q=0.7,en;q=0.6");
+        myHeaders.append("content-type", "application/json");
+        
+        const raw = JSON.stringify({
+        "email": email
+        });
+        
+        const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+        };
+        
+        fetch("https://stats.sender.net/forms/dG66gK/subscribe", requestOptions)
+        .then((response) => response.json())
+        .then((result) => {
+            if (result.success) {
+                showPopup('successNewsletterPopup', result.message);
+                setTimeout(()=>{document.querySelector('.email-modal').style.display = 'none';},1000);
+            } else {
+                showPopup('errorNewsletterPopup', result.message);
+            }
+        })
+        .catch((error) => showPopup('errorPopup', 'Nepodarilo sa odoslať formulár, skús nás kontaktovať pomocou emailu!'));  
+    }
     
     function showPopup(id, message) {
         const translations = {
@@ -248,6 +372,81 @@
         }, 3000); // Hide popup after 3 seconds
     }
 </script>
+
+<script>
+    // Function to set a cookie
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+}
+
+// Function to get a cookie by name
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const cookiesArray = document.cookie.split(';');
+    for (let i = 0; i < cookiesArray.length; i++) {
+        let cookie = cookiesArray[i].trim();
+        if (cookie.indexOf(nameEQ) === 0) {
+            return cookie.substring(nameEQ.length, cookie.length);
+        }
+    }
+    return null;
+}
+
+// Check if modal cookie exists
+const modalCookie = getCookie('modalShown');
+
+function openModal() {
+    const modal = document.querySelector('.email-modal');
+        const closeIcon = document.querySelector('.close-icon');
+
+        // Show the modal
+        modal.style.display = 'flex';
+        console.log("!!!nejde");
+
+        // Set a cookie after showing the modal
+        setCookie('modalShown', 'true', 30); // Cookie expires in 30 days
+        
+        // Add event listener to close the modal when "×" is clicked
+        closeIcon.addEventListener('click', function() {
+            modal.style.display = 'none';
+            console.log("nejde z listenera");
+        });
+
+        // close if click elsewhere
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // submit on enter
+        modalInput = document.getElementById('poptinDesignInputTextFieldEmail');
+        modalInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter" || event.keyCode === 13) {
+                event.preventDefault();  // Prevent the default "Enter" behavior (like moving to a new line in text areas)
+                submitNewsletterForm();
+                modal.style.display = "none";
+            }
+        });
+}
+
+function openCookieModal() {
+
+    // If the cookie does not exist, show the modal
+    if (!modalCookie) {
+        openModal();
+    }
+
+}
+
+openCookieModal();
+
+
+</script>
+
   
 
 </html>
